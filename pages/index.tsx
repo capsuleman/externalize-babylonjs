@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
-// import Asset3d from "../components/Asset3d";
 import styles from "../styles/Home.module.css";
 
-const Asset3d = dynamic(() => import('../components/Asset3d'), { ssr: false})
+const Asset3d = dynamic(() => import('../components/Asset3d.container'), { ssr: false})
+
 
 
 const Home: NextPage = () => {
