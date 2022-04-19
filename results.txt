@@ -1,0 +1,84 @@
+With BabylonJS as dependency
+
+time npm run build
+
+> build
+> next build
+
+info  - Checking validity of types  
+info  - Creating an optimized production build  
+info  - Compiled successfully
+info  - Collecting page data  
+info  - Generating static pages (3/3)
+info  - Finalizing page optimization  
+
+Page                                       Size     First Load JS
+┌ ○ /                                      7.37 kB        78.8 kB
+├   └ css/149b18973e5508c7.css             655 B
+├   /_app                                  0 B            71.5 kB
+├ ○ /404                                   196 B          71.7 kB
+└ λ /api/hello                             0 B            71.5 kB
++ First Load JS shared by all              71.5 kB
+  ├ chunks/framework-6e1522ff39bfc9e8.js   42.2 kB
+  ├ chunks/main-235334a2cf6d5814.js        27 kB
+  ├ chunks/pages/_app-7e2d3fd7c9a12493.js  500 B
+  ├ chunks/webpack-650b346e46d74c4a.js     1.75 kB
+  └ css/27d177a30947857b.css               194 B
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+npm run build  60,98s user 2,01s system 190% cpu 33,131 total
+npm run build  66,54s user 2,08s system 196% cpu 34,998 total
+npm run build  64,40s user 2,12s system 191% cpu 34,755 total
+npm run build  65,33s user 2,15s system 191% cpu 35,173 total
+npm run build  65,47s user 2,05s system 195% cpu 34,520 total
+npm run build  62,08s user 2,21s system 194% cpu 33,043 total
+npm run build  63,24s user 1,95s system 195% cpu 33,336 total
+npm run build  65,59s user 2,24s system 195% cpu 34,775 total
+npm run build  63,66s user 2,17s system 199% cpu 33,069 total
+
+
+==============
+
+With BabylonJS as externalized dependency
+
+time npm run build              
+
+> build
+> next build
+
+info  - Checking validity of types  
+info  - Creating an optimized production build  
+info  - Compiled successfully
+info  - Collecting page data  
+info  - Generating static pages (3/3)
+info  - Finalizing page optimization  
+
+Page                                       Size     First Load JS
+┌ ○ /                                      7.36 kB        78.9 kB
+├   └ css/149b18973e5508c7.css             655 B
+├   /_app                                  0 B            71.5 kB
+├ ○ /404                                   194 B          71.7 kB
+└ λ /api/hello                             0 B            71.5 kB
++ First Load JS shared by all              71.5 kB
+  ├ chunks/framework-c64c59bc59aba46a.js   42.2 kB
+  ├ chunks/main-7f8acbe569c9ddeb.js        27.2 kB
+  ├ chunks/pages/_app-ca6aae25bc99a05f.js  491 B
+  ├ chunks/webpack-26b2fcdf16b1c9ae.js     1.6 kB
+  └ css/27d177a30947857b.css               194 B
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+
+
+
+npm run build  30,46s user 1,14s system 227% cpu 13,874 total
+npm run build  32,16s user 1,16s system 225% cpu 14,788 total
+npm run build  33,86s user 1,28s system 221% cpu 15,855 total
+npm run build  36,34s user 1,27s system 232% cpu 16,188 total
+npm run build  36,58s user 1,23s system 230% cpu 16,424 total
+npm run build  32,73s user 1,26s system 213% cpu 15,937 total
+npm run build  30,58s user 1,07s system 219% cpu 14,442 total
+npm run build  35,22s user 1,41s system 227% cpu 16,102 total
