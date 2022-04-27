@@ -3,3 +3,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Externalize BabylonJS
 
 [Live demo](https://externalize-babylonjs.vercel.app/)
+
+[Tutorial and additional information article](https://blog.theodo.com/2022/04/externalize-large-libraries-outside-bundle/)
